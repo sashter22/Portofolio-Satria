@@ -92,14 +92,6 @@ export default function ContactSection() {
           </a>
         ))}
       </div>
-
-      {/* Footer Text */}
-      <div className="mt-16 text-gray-600 text-[10px] tracking-widest uppercase relative z-10 flex flex-col items-center gap-2">
-        <span>© 2026 Satria Bayu Agustian</span>
-        <span className="opacity-50 text-[8px]">
-          S1 Sistem Informasi • Portofolio
-        </span>
-      </div>
     </section>
   );
 }
