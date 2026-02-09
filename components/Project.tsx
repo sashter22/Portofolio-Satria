@@ -62,6 +62,14 @@ export default function Project() {
       ],
     },
     {
+      title: "ERP System Integration & Inventory Management",
+      date: "Juli 2025",
+      tag: "BUSINESS PROCESS ANALYST | PROJECT",
+      desc: "Mengonfigurasi modul Sales dan Inventory pada ERP Odoo untuk mengelola database produk retail, mengotomatisasi alur kerja pesanan, serta memantau ketersediaan stok (on-hand) secara real-time.",
+      img: "/img/odooproject.jpeg",
+      tools: ["Odoo ERP", "Inventory Management", "Business Workflow"],
+    },
+    {
       title: "KPU Kabupaten Bogor (Kantor Desa Gunungsari)",
       date: "Nov 2024",
       tag: "REGIONAL ELECTION DATA ENTRY | INTERNSHIP",
