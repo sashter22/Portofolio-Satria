@@ -1,33 +1,35 @@
 import Image from "next/image";
 
+const techStack = [
+  { src: "/img/vscode.png", alt: "VS Code" },
+  { src: "/img/javascript.png", alt: "Javascript" },
+  { src: "/img/css.png", alt: "CSS" },
+  { src: "/img/html.png", alt: "HTML" },
+  { src: "/img/github.png", alt: "Github" },
+  { src: "/img/nextjs.png", alt: "NextJS" },
+  { src: "/img/figma.png", alt: "Figma" },
+  { src: "/img/python.png", alt: "Python" },
+];
+
+const dataTools = [
+  { src: "/img/excel.png", alt: "Excel" },
+  { src: "/img/word.png", alt: "Word" },
+  { src: "/img/ppt.png", alt: "PPT" },
+  { src: "/img/capcut.png", alt: "Capcut" },
+  { src: "/img/canva.png", alt: "Canva" },
+  { src: "/img/drawio.png", alt: "Draw.io" },
+  { src: "/img/odoo.png", alt: "Odoo" },
+];
+
 export default function About() {
-  const techStack = [
-    { src: "/img/vscode.png", alt: "VS Code" },
-    { src: "/img/javascript.png", alt: "Javascript" },
-    { src: "/img/css.png", alt: "CSS" },
-    { src: "/img/html.png", alt: "HTML" },
-    { src: "/img/github.png", alt: "Github" },
-    { src: "/img/nextjs.png", alt: "NextJS" },
-    { src: "/img/figma.png", alt: "Figma" },
-    { src: "/img/python.png", alt: "Python" },
-  ];
-
-  const dataTools = [
-    { src: "/img/excel.png", alt: "Excel" },
-    { src: "/img/word.png", alt: "Word" },
-    { src: "/img/ppt.png", alt: "PPT" },
-    { src: "/img/capcut.png", alt: "Capcut" },
-    { src: "/img/canva.png", alt: "Canva" },
-    { src: "/img/drawio.png", alt: "Draw.io" },
-    { src: "/img/odoo.png", alt: "Odoo" },
-  ];
-
   return (
     <section
       id="about"
-      className="relative py-24 px-6 md:px-10 bg-transparent text-white overflow-hidden"
+      //  Ganti bg-transparent-[#0a0a0a]
+      className="relative py-24 px-6 md:px-10 bg-[#0a0a0a] text-white overflow-hidden"
     >
-      {/* --- ELEMEN DEKORATIF --- */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-purple-600/10 blur-[120px] pointer-events-none"></div>
+
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -51,7 +53,6 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 via-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 text-center md:text-left uppercase tracking-tighter">
               About Me
             </h2>
-            {/* REVISI: Garis Abu-abu Elegan (Sama kayak Project) */}
             <div className="h-[2px] w-20 bg-gray-600/50 mb-8 rounded-full"></div>
           </div>
 
@@ -90,7 +91,8 @@ export default function About() {
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <h4 className="font-bold mb-8 text-gray-500 uppercase tracking-[0.2em] text-[10px] md:text-xs">
+              {/* REVISI: Tracking normal biar gak ada efek "pinggiran" renggang */}
+              <h4 className="font-semibold mb-8 text-gray-500 text-[11px] md:text-xs tracking-wide">
                 Tech Stack & Web Dev
               </h4>
               <div className="grid grid-cols-4 md:flex md:flex-wrap gap-y-10 gap-x-4 md:gap-x-6 justify-items-center md:justify-start">
@@ -126,7 +128,8 @@ export default function About() {
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              <h4 className="font-bold mb-8 text-gray-500 uppercase tracking-[0.2em] text-[10px] md:text-xs">
+              {/* REVISI: Tracking normal biar clean */}
+              <h4 className="font-semibold mb-8 text-gray-500 text-[11px] md:text-xs tracking-wide">
                 Data, Analyst & Tools
               </h4>
               <div className="grid grid-cols-4 md:flex md:flex-wrap gap-y-10 gap-x-4 md:gap-x-6 justify-items-center md:justify-start">

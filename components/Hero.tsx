@@ -1,13 +1,12 @@
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-10 gap-10 overflow-hidden bg-transparent">
-      {/* 1. Gradasi Lampu Ungu (Kiri Bawah) - Pake Hex cerah biar kelihatan */}
+    //  Ganti bwarna gradasi[#0a0a0a]
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-10 gap-10 overflow-hidden bg-[#0a0a0a]">
       <div
         className="absolute -bottom-10 -left-10 w-80 h-80 rounded-full z-0 opacity-40 blur-[100px] pointer-events-none"
         style={{ backgroundColor: "#9333ea" }}
       ></div>
 
-      {/* 2. Elemen Geometris Segitiga (Pojok Kanan Atas) */}
       <div className="absolute -top-10 -right-10 z-0 hidden md:block opacity-20 pointer-events-none">
         <svg width="450" height="450" viewBox="0 0 400 400" fill="none">
           <path d="M400 0L400 400L0 400L400 0Z" fill="url(#grad_hero)" />
@@ -20,14 +19,13 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* 3. Aura Oranye Belakang Foto - Biar makin Pop Out */}
+      {/* 3. Aura Oranye Belakang Foto */}
       <div
         className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 rounded-full z-0 opacity-10 blur-[120px] pointer-events-none"
         style={{ backgroundColor: "#f97316" }}
       ></div>
 
       {/* --- KONTEN UTAMA --- */}
-      {/* Container ini gue kasih z-10 biar di atas semua gradasi */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10 w-full">
         {/* FOTO */}
         <div
@@ -53,7 +51,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="text-white mt-4 text-sm md:text-lg font-light tracking-widest uppercase"
+            className="text-white mt-4 text-sm md:text-lg font-light tracking-[0.2em]"
             data-aos="fade-up"
             data-aos-delay="600"
           >
@@ -70,6 +68,10 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* --- REVISI UTAMA: FADE OUT GRADIENT --- */}
+      {/* Ini yang bikin ungunya pelan-pelan ilang pas masuk ke section About/Project */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-20 pointer-events-none"></div>
     </section>
   );
 }
