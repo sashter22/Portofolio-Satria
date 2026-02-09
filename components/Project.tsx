@@ -80,7 +80,7 @@ export default function Project() {
     {
       title: "Real-time Field Monitoring",
       date: "Nov 2024",
-      tag: "GOVERNMENT SECTION STAFF ASSISTANT| INTERNSHIP",
+      tag: "GOVERNMENT SECTION STAFF ASSISTANT | INTERNSHIP",
       desc: "Melakukan monitoring langsung ke 26 TPS dan mengunggah laporan situasi secara real-time ke sistem digital Pilkada untuk memastikan kelancaran operasional pemungutan suara.",
       img: "/img/gunsar2.jpeg",
       tools: ["Real-time Reporting", "Field Operations", "Crisis Management"],
@@ -89,7 +89,7 @@ export default function Project() {
     {
       title: "NIB & IKD Digital Integration",
       date: "Sep - Des 2024",
-      tag: "GOVERNMENT SECTION STAFF ASSISTANT| INTERNSHIP",
+      tag: "GOVERNMENT SECTION STAFF ASSISTANT | INTERNSHIP",
       desc: "Mengelola administrasi penerbitan 90 dokumen NIB dan memfasilitasi aktivasi 35 akun IKD untuk mendukung percepatan digitalisasi layanan publik di wilayah Kecamatan Citeureup.",
       img: "/img/ikdnib.jpeg",
       tools: ["Administration", "Digital Identity", "OSS System"],
@@ -97,7 +97,7 @@ export default function Project() {
     {
       title: "Monitoring & Evaluasi APBDes",
       date: "Sep - Des 2024",
-      tag: "GOVERNMENT SECTION STAFF ASSISTANT| INTERNSHIP",
+      tag: "GOVERNMENT SECTION STAFF ASSISTANT | INTERNSHIP",
       desc: "Melaksanakan peninjauan langsung dan evaluasi terhadap laporan APBDes untuk memastikan transparansi serta akuntabilitas penggunaan anggaran di tingkat desa.",
       img: "/img/monev.jpeg",
       tools: ["Data Verification", "Field Monitoring", "Evaluation"],
@@ -105,7 +105,7 @@ export default function Project() {
     {
       title: "Data Recapitulation System",
       date: "Sep - Des 2024",
-      tag: "GOVERNMENT SECTION STAFF ASSISTANT| INTERNSHIP",
+      tag: "GOVERNMENT SECTION STAFF ASSISTANT | INTERNSHIP",
       desc: "Melakukan rekapitulasi data sektoral secara sistematis untuk mendukung pelaporan instansi yang akurat dan tepat waktu.",
       img: "/img/rekap.jpeg",
       tools: ["Data Entry", "Microsoft Word", "Reporting"],
@@ -113,7 +113,7 @@ export default function Project() {
     {
       title: "Standard Operating Procedure (SOP) Design",
       date: "Sep - Des 2024",
-      tag: "GOVERNMENT SECTION STAFF ASSISTANT| INTERNSHIP",
+      tag: "GOVERNMENT SECTION STAFF ASSISTANT | INTERNSHIP",
       desc: "Menyusun diagram alur SOP pelayanan publik untuk menyederhanakan birokrasi, memberikan panduan teknis yang jelas bagi petugas dan masyarakat.",
       img: "/img/sop.png",
       tools: ["Process Mapping", "SOP Development", "Workflow Design"],
@@ -134,13 +134,9 @@ export default function Project() {
     >
       {/* --- LAYER GRADASI KHUSUS PROJECT --- */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Titik Ungu Atas */}
         <div className="absolute top-[5%] -left-[10%] w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full"></div>
-        {/* Titik Ungu Tengah Kanan */}
         <div className="absolute top-[35%] -right-[10%] w-[600px] h-[600px] bg-purple-700/15 blur-[130px] rounded-full"></div>
-        {/* Titik Ungu Tengah Kiri */}
         <div className="absolute top-[65%] -left-[5%] w-[500px] h-[500px] bg-indigo-600/15 blur-[120px] rounded-full"></div>
-        {/* Titik Ungu Bawah Kanan */}
         <div className="absolute top-[90%] -right-[5%] w-[500px] h-[500px] bg-purple-800/20 blur-[110px] rounded-full"></div>
       </div>
 
@@ -169,9 +165,7 @@ export default function Project() {
         {frontEndProjects.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-            } gap-12 items-center`}
+            className={`flex flex-col ${index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"} gap-12 items-center`}
           >
             {/* Sisi Gambar */}
             <div
@@ -196,8 +190,10 @@ export default function Project() {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
+              {/* --- BAGIAN YANG DIREVISI (TAG & DATE) --- */}
               <div className="flex justify-between items-center">
-                <span className="text-[10px] font-bold tracking-[0.2em] text-orange-500 uppercase bg-orange-500/10 px-2 py-1 rounded">
+                {/* REVISI: Polos, tanpa kotak, tanpa uppercase teriak */}
+                <span className="text-sm font-semibold text-orange-500 capitalize">
                   {item.tag}
                 </span>
                 <span className="text-gray-500 text-xs font-medium">
