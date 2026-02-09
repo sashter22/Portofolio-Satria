@@ -21,7 +21,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname(); // Ambil data URL saat ini
+  const pathname = usePathname();
 
   useEffect(() => {
     AOS.init({
@@ -31,20 +31,23 @@ export default function RootLayout({
     });
   }, []);
 
-  // KUNCI BIAR TRANSISI HALAMAN JALAN:
-  // Setiap kali pathname (URL) berubah, kita refresh AOS-nya
   useEffect(() => {
     AOS.refresh();
   }, [pathname]);
 
   return (
     <html lang="en" className="scroll-smooth">
+      {/* REVISI: Tambah overflow-x-hidden di body */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212] overflow-x-hidden`}
       >
-        {/* Bungkus children pake div yang punya animasi fade-in */}
-        {/* Key={pathname} ini penting bgt biar React tau ini halaman baru */}
-        <div key={pathname} data-aos="fade" data-aos-duration="800">
+        {/* REVISI: Tambah overflow-x-hidden juga di pembungkus konten */}
+        <div
+          key={pathname}
+          data-aos="fade"
+          data-aos-duration="800"
+          className="overflow-x-hidden"
+        >
           {children}
         </div>
       </body>
