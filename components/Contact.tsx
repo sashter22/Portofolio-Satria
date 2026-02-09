@@ -2,6 +2,7 @@
 
 import React from "react";
 
+// Data Sosmed (Definisikan di sini biar nggak error merah lagi)
 const contactData = [
   {
     platform: "WHATSAPP",
@@ -42,19 +43,34 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center gap-10 py-24 bg-[#121212] text-white scroll-mt-20"
+      className="relative flex flex-col items-center gap-12 py-24 bg-[#0a0a0a] text-white scroll-mt-20 overflow-hidden"
     >
+      {/* --- EFEK GRADASI UNGU PENUTUP (Layer Terpisah biar Enteng) --- */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+      {/* Dot Pattern - Konsisten dengan section lain */}
       <div
-        className="text-center flex flex-col items-center"
+        className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(white 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      ></div>
+
+      {/* Header Section */}
+      <div
+        className="text-center flex flex-col items-center relative z-10"
         data-aos="fade-down"
       >
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 to-orange-400 bg-clip-text text-transparent mb-2">
+        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 via-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 uppercase tracking-tighter">
           Let's Connect!
         </h2>
-        <div className="h-1 w-24 bg-gray-500 mb-4"></div>
+        {/* Garis Abu-abu Minimalis */}
+        <div className="h-[2px] w-20 bg-gray-600/50 mb-4 rounded-full"></div>
       </div>
 
-      <div className="flex flex-row justify-center items-center gap-8 md:gap-16">
+      {/* Contact Cards */}
+      <div className="flex flex-row justify-center items-center gap-8 md:gap-20 relative z-10">
         {contactData.map((contact, index) => (
           <a
             key={index}
@@ -63,17 +79,26 @@ export default function ContactSection() {
             rel="noopener noreferrer"
             data-aos="zoom-in"
             data-aos-delay={index * 200}
-            className="flex flex-col items-center gap-3 transition-all duration-300 transform hover:scale-110 group"
+            className="flex flex-col items-center gap-4 transition-all duration-300 transform hover:-translate-y-2 group"
           >
-            <div className="p-2 transition-transform duration-300 group-hover:rotate-12">
+            {/* Box Ikon dengan Glow Ungu saat Hover */}
+            <div className="relative p-4 bg-white/5 rounded-2xl border border-white/10 transition-all duration-300 group-hover:border-purple-500/50 group-hover:bg-purple-500/10 shadow-sm group-hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]">
               {contact.icon}
             </div>
 
-            <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.3em] text-gray-500 uppercase group-hover:text-orange-400 transition-colors">
+            <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-500 uppercase group-hover:text-purple-400 transition-colors">
               {contact.platform}
             </span>
           </a>
         ))}
+      </div>
+
+      {/* Footer Text */}
+      <div className="mt-16 text-gray-600 text-[10px] tracking-widest uppercase relative z-10 flex flex-col items-center gap-2">
+        <span>© 2026 Satria Bayu Agustian</span>
+        <span className="opacity-50 text-[8px]">
+          S1 Sistem Informasi • Portofolio
+        </span>
       </div>
     </section>
   );

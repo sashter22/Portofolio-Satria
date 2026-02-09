@@ -128,19 +128,44 @@ export default function Project() {
     },
   ];
   return (
-    <section id="project" className="py-20 px-6 md:px-10 bg-[#121212]">
-      {/* HEADER SECTION */}
-      <div
-        className="max-4xl mx-auto flex flex-col items-center w-full mb-16"
-        data-aos="fade-down" // Header muncul dari atas
-      >
-        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-600 to-orange-400 bg-clip-text text-transparent mb-2 text-center uppercase tracking-tighter">
-          My Projects
-        </h2>
-        <div className="h-1 w-24 bg-gray-500"></div>
+    <section
+      id="project"
+      className="relative py-24 px-6 md:px-10 bg-[#0a0a0a] overflow-hidden"
+    >
+      {/* --- LAYER GRADASI KHUSUS PROJECT --- */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Titik Ungu Atas */}
+        <div className="absolute top-[5%] -left-[10%] w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full"></div>
+        {/* Titik Ungu Tengah Kanan */}
+        <div className="absolute top-[35%] -right-[10%] w-[600px] h-[600px] bg-purple-700/15 blur-[130px] rounded-full"></div>
+        {/* Titik Ungu Tengah Kiri */}
+        <div className="absolute top-[65%] -left-[5%] w-[500px] h-[500px] bg-indigo-600/15 blur-[120px] rounded-full"></div>
+        {/* Titik Ungu Bawah Kanan */}
+        <div className="absolute top-[90%] -right-[5%] w-[500px] h-[500px] bg-purple-800/20 blur-[110px] rounded-full"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto space-y-32">
+      {/* --- DOT PATTERN --- */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(white 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      ></div>
+
+      {/* HEADER SECTION */}
+      <div
+        className="max-w-4xl mx-auto flex flex-col items-center w-full mb-24 relative z-10"
+        data-aos="fade-down"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 via-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 text-center uppercase tracking-tighter">
+          My Projects
+        </h2>
+        <div className="h-[2px] w-20 bg-gray-600/50 rounded-full"></div>
+      </div>
+
+      {/* LIST PROJECT */}
+      <div className="max-w-6xl mx-auto space-y-32 relative z-10">
         {frontEndProjects.map((item, index) => (
           <div
             key={index}
@@ -148,31 +173,31 @@ export default function Project() {
               index % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
             } gap-12 items-center`}
           >
-            {/* Sisi Gambar: Muncul dari sisi sesuai posisinya */}
+            {/* Sisi Gambar */}
             <div
               className="w-full md:w-1/2 group"
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} // Zig-zag effect
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               data-aos-duration="1000"
             >
-              <div className="relative shadow-2xl rounded-2xl overflow-hidden border border-gray-800 transition-all duration-500 group-hover:border-orange-500/50">
+              <div className="relative shadow-2xl rounded-2xl overflow-hidden border border-white/5 transition-all duration-500 group-hover:border-orange-500/50 bg-gray-900/50 backdrop-blur-sm">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-700 grayscale-[30%] group-hover:grayscale-0"
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-700 grayscale-[20%] group-hover:grayscale-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-40"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent opacity-60"></div>
               </div>
             </div>
 
-            {/* Sisi Teks: Muncul dari arah berlawanan gambar */}
+            {/* Sisi Teks */}
             <div
-              className="w-full md:w-1/2 space-y-4"
-              data-aos={index % 2 === 0 ? "fade-left" : "fade-right"} // Berlawanan dengan gambar
+              className="w-full md:w-1/2 space-y-5"
+              data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-[10px] font-bold tracking-[0.2em] text-orange-500 uppercase">
+              <div className="flex justify-between items-center">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-orange-500 uppercase bg-orange-500/10 px-2 py-1 rounded">
                   {item.tag}
                 </span>
                 <span className="text-gray-500 text-xs font-medium">
@@ -180,22 +205,19 @@ export default function Project() {
                 </span>
               </div>
 
-              <h3 className="text-3xl font-bold text-white tracking-tight">
+              <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight group-hover:text-orange-400 transition-colors">
                 {item.title}
               </h3>
 
-              <p className="text-gray-400 text-sm leading-relaxed text-justify">
+              <p className="text-gray-400 text-sm md:text-base leading-relaxed text-justify font-light">
                 {item.desc}
               </p>
 
-              {/* Tools yang Digunakan: Muncul kecil satu-satu */}
               <div className="flex flex-wrap gap-2 pt-4">
                 {item.tools.map((tool, tIndex) => (
                   <span
                     key={tIndex}
-                    data-aos="zoom-in"
-                    data-aos-delay={400 + tIndex * 100} // Efek muncul satu-satu buat tag
-                    className="px-3 py-1 text-[10px] border border-gray-700 rounded-full text-gray-300 font-medium"
+                    className="px-3 py-1 text-[10px] border border-white/10 bg-white/5 rounded-full text-gray-300 font-medium hover:bg-orange-500/20 hover:border-orange-500/40 transition-all cursor-default"
                   >
                     {tool}
                   </span>
