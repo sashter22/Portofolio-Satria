@@ -69,8 +69,7 @@ export default function ContactSection() {
         <div className="h-[2px] w-20 bg-gray-600/50 mb-4 rounded-full"></div>
       </div>
 
-      {/* Contact Cards */}
-      <div className="flex flex-row justify-center items-center gap-8 md:gap-20 relative z-10">
+      <div className="flex flex-row justify-center items-center gap-12 md:gap-24 relative z-10">
         {contactData.map((contact, index) => (
           <a
             key={index}
@@ -79,13 +78,14 @@ export default function ContactSection() {
             rel="noopener noreferrer"
             data-aos="zoom-in"
             data-aos-delay={index * 200}
-            className="flex flex-col items-center gap-4 transition-all duration-300 transform hover:-translate-y-2 group"
+            className="flex flex-col items-center gap-4 transition-all duration-300 group"
           >
-            {/* Box Ikon dengan Glow Ungu saat Hover */}
-            <div className="relative p-4 bg-white/5 rounded-2xl border border-white/10 transition-all duration-300 group-hover:border-purple-500/50 group-hover:bg-purple-500/10 shadow-sm group-hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]">
+            {/* IKON LANGSUNG (Tanpa Bingkai) */}
+            <div className="transition-all duration-300 transform group-hover:scale-125 group-hover:-translate-y-2 group-hover:drop-shadow-[0_0_15px_rgba(147,51,234,0.5)]">
               {contact.icon}
             </div>
 
+            {/* LABEL PLATFORM */}
             <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] text-gray-500 uppercase group-hover:text-purple-400 transition-colors">
               {contact.platform}
             </span>
