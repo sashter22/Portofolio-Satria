@@ -9,7 +9,7 @@ export default function Footer() {
           © 2026 Satria Bayu Agustian
         </p>
         <p className="text-gray-600 text-[9px] tracking-[0.2em] uppercase opacity-60">
-          Information Systems •
+          • Information Systems •
         </p>
       </div>
 
