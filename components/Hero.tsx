@@ -9,7 +9,7 @@ export default function Hero() {
         <img
           src="/img/foto-satria.jpeg"
           alt="Satria Bayu Agustian"
-          className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+          className="w-full h-full object-cover grayscale-0 md:grayscale md:hover:grayscale-0 transition duration-500"
         />
       </div>
 
