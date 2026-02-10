@@ -7,8 +7,8 @@ const techStack = [
   { src: "/img/html.png", alt: "HTML" },
   { src: "/img/github.png", alt: "Github" },
   { src: "/img/nextjs.png", alt: "NextJS" },
-  { src: "/img/figma.png", alt: "Figma" },
   { src: "/img/python.png", alt: "Python" },
+  { src: "/img/gso.png", alt: "gso" },
 ];
 
 const dataTools = [
@@ -19,6 +19,7 @@ const dataTools = [
   { src: "/img/canva.png", alt: "Canva" },
   { src: "/img/drawio.png", alt: "Draw.io" },
   { src: "/img/odoo.png", alt: "Odoo" },
+  { src: "/img/figma.png", alt: "Figma" },
 ];
 
 export default function About() {
