@@ -1,6 +1,22 @@
 export default function Project() {
   const frontEndProjects = [
     {
+      title: "Angkringan Mokas Magetan",
+      date: "Mar 2026",
+      tag: "FRONTEND DEVELOPER | FREELANCE",
+      desc: "Membangun *hero section* yang menarik dan interaktif untuk memperkenalkan identitas Angkringan Mokas secara digital. Fokus pada desain antarmuka yang modern, responsif, dan mampu menyampaikan pesan 'Nongkrong Asik' kepada audiens target sejak tahun 2015.",
+      img: "/img/mokas1.png",
+      tools: ["Next.js", "Tailwind CSS", "Branding"],
+    },
+    {
+      title: "Mokas Location & Maps Integration",
+      date: "Mar 2026",
+      tag: "FRONTEND DEVELOPER | FREELANCE",
+      desc: "Mengimplementasikan fitur lokasi interaktif dengan mengintegrasikan Google Search Console dan Google Maps di platform Angkringan Mokas. Fitur ini dirancang untuk memudahkan pelanggan menemukan rute tepat ke alamat di Magetan, lengkap dengan tombol petunjuk jalan dan informasi jam operasional yang akurat.",
+      img: "/img/mokas2.png",
+      tools: ["Next.js", "Google Maps", "User Experience"],
+    },
+    {
       title: "Happy Wedding Organizer",
       date: "Feb 2026",
       tag: "FRONTEND DEVELOPER | FREELANCE",
