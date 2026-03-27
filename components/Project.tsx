@@ -1,10 +1,18 @@
 export default function Project() {
   const frontEndProjects = [
     {
+      title: "Sistem Informasi Pengarsipan Surat",
+      date: "Mar 2026",
+      tag: "FULLSTACK DEVELOPER | PROJECT",
+      desc: "Membangun sistem manajemen arsip digital yang efisien untuk mengelola alur surat masuk dan keluar secara terorganisir. Dilengkapi dengan dashboard analitik real-time, manajemen data instansi, serta fitur pelaporan otomatis untuk meningkatkan akurasi pendataan berkas.",
+      img: "/img/sipas.png",
+      tools: ["Next.js", "Supabase", "Tailwind CSS", "Recharts"],
+    },
+    {
       title: "Angkringan Mokas Magetan",
       date: "Mar 2026",
       tag: "FRONTEND DEVELOPER | FREELANCE",
-      desc: "Membangun *hero section* yang menarik dan interaktif untuk memperkenalkan identitas Angkringan Mokas secara digital. Fokus pada desain antarmuka yang modern, responsif, dan mampu menyampaikan pesan 'Nongkrong Asik' kepada audiens target sejak tahun 2015.",
+      desc: "Membangun hero section yang menarik dan interaktif untuk memperkenalkan identitas Angkringan Mokas secara digital. Fokus pada desain antarmuka yang modern, responsif, dan mampu menyampaikan pesan 'Nongkrong Asik' kepada audiens target sejak tahun 2015.",
       img: "/img/mokas1.png",
       tools: ["Next.js", "Tailwind CSS", "Branding"],
     },
