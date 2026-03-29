@@ -80,14 +80,14 @@ export default function Project() {
       img: "/img/skripsi.png",
       tools: [
         "Pyhton",
-        "SVM Algotihm",
+        "SVM Algorithm",
         "Data Science",
         "Natural Language Processing",
       ],
     },
     {
       title: "ERP System Integration & Inventory Management",
-      date: "Juli 2025",
+      date: "Jul 2025",
       tag: "BUSINESS PROCESS ANALYST | PROJECT",
       desc: "Mengonfigurasi modul Sales dan Inventory pada ERP Odoo untuk mengelola database produk retail, mengotomatisasi alur kerja pesanan, serta memantau ketersediaan stok (on-hand) secara real-time.",
       img: "/img/odooproject.jpeg",
@@ -156,7 +156,7 @@ export default function Project() {
       id="project"
       className="relative py-24 px-6 md:px-10 bg-[#0a0a0a] overflow-hidden"
     >
-      {/* --- LAYER GRADASI KHUSUS PROJECT --- */}
+      {/* --- Layer gradasi project --- */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[5%] -left-[10%] w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full"></div>
         <div className="absolute top-[35%] -right-[10%] w-[600px] h-[600px] bg-purple-700/15 blur-[130px] rounded-full"></div>
@@ -184,7 +184,7 @@ export default function Project() {
         <div className="h-[2px] w-20 bg-gray-600/50 rounded-full"></div>
       </div>
 
-      {/* LIST PROJECT */}
+      {/* List Project */}
       <div className="max-w-6xl mx-auto space-y-32 relative z-10">
         {frontEndProjects.map((item, index) => (
           <div
@@ -214,9 +214,8 @@ export default function Project() {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              {/* --- BAGIAN YANG DIREVISI (TAG & DATE) --- */}
+              {/* --- (Tag & Date) --- */}
               <div className="flex justify-between items-center">
-                {/* REVISI: Polos, tanpa kotak, tanpa uppercase teriak */}
                 <span className="text-sm font-semibold text-orange-500 capitalize">
                   {item.tag}
                 </span>
