@@ -2,7 +2,7 @@ export default function Project() {
   const frontEndProjects = [
     {
       title: "Sistem Informasi Pengarsipan Surat",
-      date: "Mar 2026",
+      date: "Apr 2026",
       tag: "FULLSTACK DEVELOPER | PROJECT",
       desc: "Membangun sistem manajemen arsip digital yang efisien untuk mengelola alur surat masuk dan keluar secara terorganisir. Dilengkapi dengan dashboard analitik real-time, manajemen data instansi, serta fitur pelaporan otomatis untuk meningkatkan akurasi pendataan berkas.",
       img: "/img/sipas.png",
